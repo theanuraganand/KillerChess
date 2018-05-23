@@ -10,6 +10,20 @@ Console Killer Chess Game using JavaScript
 6. Check Mate Analysis<br>
 7. Bishop only moves Diagonal<br>
 
+<h4>Abbriviations</h4>
+kl- Light King (White King)<br>
+bl- Light Bishop (White Bishop)<br><br>
+
+kd- Dark King (Black King)<br>
+bd- Dark Bishop (Black Bishop)<br><br>
+
+<h4>Rules</h4>
+1. There are only 2 Kings (One of Each Color) and several Bishops
+2. Bishop can't Jump.
+3. Bishop can move diagonaly any number of boxes.
+4. King can move 1 box in any direction.
+5. Chess is 8x8
+
 <h3>Screenshots according to test cases</h3>
 <br>
 <p>1. The below Screenshot shows that Adjacent enemy can Check</p>
