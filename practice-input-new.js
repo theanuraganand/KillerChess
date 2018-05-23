@@ -41,7 +41,6 @@ let ChessPlayer = class {
                 col1 = this.whiteKingPos[1]
             while (row1 < rowLen && col1 < colLen) {
                 if (this.board[row1][col1] === 'bl' || this.board[row1][col1] === 'kd') {
-                        console.log("break")
                         break
                 }
                 
