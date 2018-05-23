@@ -18,11 +18,11 @@ kd- Dark King (Black King)<br>
 bd- Dark Bishop (Black Bishop)<br><br>
 
 <h4>Rules</h4>
-1. There are only 2 Kings (One of Each Color) and several Bishops
-2. Bishop can't Jump.
-3. Bishop can move diagonaly any number of boxes.
-4. King can move 1 box in any direction.
-5. Chess is 8x8
+1. There are only 2 Kings (One of Each Color) and several Bishops<br>
+2. Bishop can't Jump.<br>
+3. Bishop can move diagonaly any number of boxes.<br>
+4. King can move 1 box in any direction.<br>
+5. Chess is 8x8<br><br>
 
 <h3>Screenshots according to test cases</h3>
 <br>
