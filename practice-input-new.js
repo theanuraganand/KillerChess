@@ -118,7 +118,7 @@ let ChessPlayer = class {
             }
             
             moves.forEach(element => {
-                if (this.board[element[0]][element[1]] === 'bd' || this.board[element[0]][element[1]] === 'kd') {
+                if (this.board[element[0]][element[1]] === 'kd') {
                     black++
                 }
             });
@@ -145,7 +145,8 @@ let ChessPlayer = class {
                     emptySpaces++
                 }
             });
-            return (emptySpaces > 0) ? false : true;
+            let result = (emptySpaces > 0) ? false : true;
+            return (result && this.WhiteKingIsInCheck())
         }
 
         getMoves() {
