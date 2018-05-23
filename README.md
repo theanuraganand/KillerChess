@@ -12,3 +12,5 @@ Console Killer Chess Game using JavaScript
 
 <h3>Screenshots</h3>
 ![Screenshot](https://raw.githubusercontent.com/theanuraganand/KillerChess/master/Screenshots/Screen%20Shot%202018-05-23%20at%2010.55.29%20PM.png)
+
+![alt text](KillerChess/Screenshots/Screen Shot 2018-05-23 at 10.55.29 PM.png "Description goes here")
