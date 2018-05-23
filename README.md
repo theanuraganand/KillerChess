@@ -8,3 +8,4 @@ Console Killer Chess Game using JavaScript
 4. Place for King to change possition at Check
 5. Can be tweeked to print number of availabe places to change position for King
 6. Check Mate Analysis
+7. Bishop only moves Diagonal
