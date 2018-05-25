@@ -31,11 +31,6 @@ let ChessPlayer = class {
             return pos
         }
 
-        // setWhiteKing(x, y){
-        //     let pos = [x,y]
-        //     return pos
-        // }
-
         WhiteKingIsInCheck() {
             let rowLen = this.board[0].length,
                 colLen = this.board.length,
