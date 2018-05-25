@@ -1,6 +1,8 @@
 # KillerChess
 Console Killer Chess Game using JavaScript
 
+<b>Updated</b> <i> The game has been updated. Now the game finds wether the king will be check at every possible empty space for the king to re-locate.<i>
+
 <h3>What's Working</h3>
 1. Diagonal Search for enemy<br>
 2. Bishop can't jumb<br>
