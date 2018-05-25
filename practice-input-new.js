@@ -31,6 +31,11 @@ let ChessPlayer = class {
             return pos
         }
 
+        // setWhiteKing(x, y){
+        //     let pos = [x,y]
+        //     return pos
+        // }
+
         WhiteKingIsInCheck() {
             let rowLen = this.board[0].length,
                 colLen = this.board.length,
@@ -102,6 +107,77 @@ let ChessPlayer = class {
 
         }
 
+        WhiteKingWillBeCheck(row, col) {
+            let rowLen = this.board[0].length,
+                colLen = this.board.length,
+                check = false
+
+            //check bottom right
+            let row1 = row,
+                col1 = col
+            while (row1 < rowLen && col1 < colLen) {
+                if (this.board[row1][col1] === 'bl' || this.board[row1][col1] === 'kd') {
+                        break
+                }
+                
+                if (this.board[row1][col1] === 'bd') {
+                    check = true
+                    break
+                }
+                row1++;
+                col1++;
+            }
+            //check top right
+            let row2 = row,
+                col2 = col
+            while (row2 < rowLen && col2 >= 0) {
+                
+                if (this.board[row2][col2] === 'bl' || this.board[row2][col2] === 'kd') {
+                    break
+                }
+                
+                if (this.board[row2][col2] === 'bd') {
+                    check = true
+                    break
+                }
+                row2++;
+                col2--;
+            }
+            //check top left
+            let row3 = row,
+                col3 = col
+            while (row3 >= 0 && col3 >= 0) {
+                 if (this.board[row2][col2] === 'bl' || this.board[row2][col2] === 'kd') {
+                    break
+                }
+                if (this.board[row3][col3] === 'bd') {
+                    check = true
+                    break
+                }
+                row3--;
+                col3--;
+            }
+            //check bottom left
+            let row4 = row,
+                col4 = col
+            while (row4 >= 0 && col4 < colLen) {
+                if (this.board[row4][col4] === 'bl' || this.board[row4][col4] === 'kd') {
+                     break
+                }
+                if (this.board[row4][col4] === 'bd') {
+                    check = true
+                    break
+                }
+                row4--;
+                col4++;
+            }
+
+            // call adjacent check for king
+            check = check || this.adjacentBlack()
+            return (check)
+
+        }
+
         adjacentBlack() {
             let moves = this.getMoves(),
                 black = 0
@@ -142,10 +218,15 @@ let ChessPlayer = class {
             
             moves.forEach(element => {
                 if (this.board[element[0]][element[1]] === '  ') {
-                    emptySpaces++
+                    let bol = this.WhiteKingWillBeCheck(element[0],element[1])
+                    //console.log(""+element[0]+element[1]+bol)
+                    if(!bol){
+                        emptySpaces++
+                    }  
                 }
             });
             let result = (emptySpaces > 0) ? false : true;
+
             return (result && this.WhiteKingIsInCheck())
         }
 
